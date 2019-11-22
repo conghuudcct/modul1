@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+        <button onclick="playguess();">Chơi</button>
+    <script>
+        function playguess() {
+            let inputRange = parseInt(prompt("enter your range number"));
+            let guessNumgber = Math.floor(Math.random() * (inputRange + 1));
+            if (inputRange <= 0) {
+                alert('wrong input');
+            } else {
+                let i =0
+                while (i < 3) {
+                    let inputNumgber = +prompt("enter your number");
+                    console.log(guessNumgber);
+                    if (inputNumgber === guessNumgber) {
+                        alert("chúc mừng bạn đã đoán đúng");
+                        break;
+                    }
+                    if (inputRange !== inputNumgber) {
+                        alert("sai rồi. mời bạn chơi lại");
+                    }
+                    i++;
+
+                }
+                
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

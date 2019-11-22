@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let mang = [10,20,30,40,50,60];
+        let max = 0;
+        let sum = 0;
+        for (i = 0; i < mang.length; i++) {
+            if (mang[i] > max) {
+                max = mang[i];
+            }
+            sum += mang[i];
+        }
+        trungbinh = sum / mang.length;
+        alert("gia tri lon nhat la " + max + " gia tri trung binh la " + trungbinh)
+    </script>
+</body>
+
+</html>

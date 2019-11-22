@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = parseFloat(prompt("nhập giá trị a vào đây mi"));
+        let b = parseFloat(prompt("nhập giá trị b vào đây mi"));
+        let c = parseFloat(prompt("nhập giá trị c vào đây mi"));
+        let result = b * b - 4 * a * c;
+        if (result < 0) {
+            alert("phuong trinh vo nghiem");
+        } else if (result === 0) {
+            alert("phuong trinh co hai nghiem " + -(b / 2 * a));
+        } else {
+            let x1 = (-b + Math.sqrt(result)) / (2 * a);
+            let x2 = (-b - Math.sqrt(result)) / (2 * a);
+            alert("phuong trinh co hai nghiem x1 = " + x1 + " va x2 = " + x2);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

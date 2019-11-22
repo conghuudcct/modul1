@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let month = parseInt(prompt("nhap vao so thang"));
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert("thang ni 31 ngày á nì hoho");
+                break;
+            case 2:
+                alert("thang ni 28 hoặc 29 ngày á nì hoho");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert("thang ni 30 ngày á nì hoho");
+                break;
+            default:
+                alert("một năm có 12 tháng thôi thằng ngu nờ hoho");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <label>độ F </label>;
+        <input id='nhapdoF' type="number" placeholder="độ F" oninput="chuyennhietdo()" ;
+            onchange="chuyennhietdo()">
+
+    </p>
+
+    <p>
+        do C: <span id="doC"></span>
+    </p>
+
+    <!-- <input type="text" id="layGiaTri">
+    <button onclick="xinChao()">hienGiaTri</button> -->
+    <script>
+        function chuyennhietdo(n) {
+            let doF=document.getElementById('nhapdoF').value; // lấy giá trị tại o input qua id
+            document.getElementById('doC').innerHTML=(doF-32)/1.8; // in ra màn hình tại id 
+
+        }
+
+        // function xinChao(){
+        //     let a=document.getElementById('layGiaTri').value; // lấy giá trị tại o input qua id;
+        //     alert("xin chào "+a)
+        // }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let mang1 = [2, 5, 3, 23, , 543, 6, 234, 2423]
+        let mang2 = [2, 3, 5, 24, 345, 243, 23, 2]
+        let mang3 = [23, 3, 4, 32, 64, 37, 54234, 234]
+        function maxmang(mang) {
+            let max = mang[0];
+            for (i = 0; i < mang.length; i++) {
+                if (max < mang[i]) {
+                    max = mang[i]
+                }
+            }
+            return max;
+        }x
+        let a = maxmang(mang1)
+        document.write(a +"</br>")
+
+        let b = maxmang(mang2)
+        document.write(b +"</br>")
+        let c = maxmang(mang3)
+        document.write(c +"</br>")
+
+
+
+    </script>
+</body>
+
+</html>

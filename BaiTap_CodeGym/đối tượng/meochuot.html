@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <h1 id="chuot"></h1>
+  <h2 id="meo"></h2>
+  <button onclick="tangtoc()">TăngTốc</button>
+  <button onclick="anchuot()">Ăn</button>
+
+
+</head>
+
+<body>
+  <script>
+    let Mouse = function (name, num, speed) {
+      this.name = name;
+      this.num = num;
+      this.speed = speed;
+
+
+      this.getName = function () {
+        return this.name
+      }
+
+      this.getNum = function () {
+        return this.num
+      }
+
+      this.getSpeed = function () {
+        return this.speed
+      }
+
+
+
+      this.isEmpty = function () {
+        if (this.num == 0) {
+          alert("hết chuột ")
+        }
+        this.speak = function () {
+          alert("mả cha con mèo")
+        }
+      }
+    }
+    let Cat = function (name, weight, speed) {
+      this.name = name;
+      this.weight = weight;
+      this.speed = speed;
+
+      this.getName = function () {
+        return this.name
+      }
+
+      this.getWeight = function () {
+        return this.weight;
+      }
+
+      this.getSpeed = function () {
+        return this.speed;
+      }
+
+      this.speak = function () {
+        alert("TOM: mày không trốn được tao đâu con trai. tu bi con tì niu")
+      }
+
+      this.catchMouse = function (jerry) {
+        if (this.speed > jerry.getSpeed()) {
+          
+          alert("JERRY: chết mẹ...anh tha cho e :( ")
+          // this.speak();
+        }
+        else {
+          this.speak();
+          alert(" JERRY: mả cha mi ngu như mèo lêu lêu");
+          this.speed++;
+        }
+
+      }
+
+      this.eatMuose = function (jerry) {
+        if (jerry.num > 0 && this.speed > jerry.getSpeed()) {
+          this.weight++;
+          jerry.num--;
+        }
+        else {
+          jerry.isEmpty();
+        }
+      }
+
+    }
+    let tom = new Cat("Tom", 15, 4)
+    let jerry = new Mouse("Jerry", 5, 5)
+    chuot = document.getElementById("chuot");
+    meo = document.getElementById("meo");
+    chuot.innerHTML = jerry.getName() + "   " + jerry.getNum() + "   " + jerry.getSpeed();
+    meo.innerHTML = tom.getName() + " " + tom.getWeight() + "   " + tom.getSpeed();
+
+    function tangtoc() {
+      tom.catchMouse(jerry);
+      chuot.innerHTML = jerry.getName() + "    " + jerry.getNum() + "   " + jerry.getSpeed();
+      meo.innerHTML = tom.getName() + "    " + tom.getWeight() + "    " + tom.getSpeed();
+    }
+    function anchuot() {
+      tom.eatMuose(jerry);
+      chuot.innerHTML = jerry.getName() + "    " + jerry.getNum() + "   " + jerry.getSpeed();
+      meo.innerHTML = tom.getName() + "    " + tom.getWeight() + "    " + tom.getSpeed();
+
+    }
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

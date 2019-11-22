@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <h1 id="per1">Adam</h1>
+    <button onclick="eatApple1()">Adam</button>
+    <h2 id="per2">Eva</h2>
+    <button onclick="eatApple2()">Eva</button>
+    <h3 id="app">Apple</h3>
+</head>
+
+<body>
+    <script>
+        let Apple = function (weight) {
+            this.weight = weight;
+
+            this.decrease = function (weight) {
+                return this.weight--;
+            }
+            this.isEmpty = function () {
+                if (this.weight == 0) {
+                    alert("het tao")
+                }
+            }
+            this.getWeight = function () {
+                return this.weight;
+            }
+        }
+
+        let Human = function (name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+
+            this.getGender = function () {
+                return this.gender;
+            }
+            this.getName = function () {
+                return this.name;
+            }
+            this.checkApple = function (weight) {
+                if (apple.weight > 0) {
+                    return true
+                }
+                else {
+                    return false
+                }
+            }
+            this.eat = function (apple) {
+                if (apple.weight > 0) {
+                    this.weight++
+                    apple.decrease()
+                } else {
+                    apple.isEmpty();
+                }
+
+            }
+            this.getWeight = function () {
+                return this.weight;
+            }
+            this.speak = function (string) {
+                alert(string)
+            }
+
+
+        }
+        let nguoi1 = new Human('Adam', 'male', 100);
+        let apple = new Apple(5);
+        let nguoi2 = new Human('Eva', 'male', 40);
+        per1 = document.getElementById("per1");
+        per2 = document.getElementById("per2");
+        app = document.getElementById("app");
+        app.innerHTML = apple.getWeight();
+        per1.innerHTML = nguoi1.getWeight();
+        per2.innerHTML = nguoi2.getWeight();
+
+        function eatApple1() {
+            nguoi1.eat(apple);
+            app.innerHTML = apple.getWeight();
+            per1.innerHTML = nguoi1.getWeight();
+            per2.innerHTML = nguoi2.getWeight();
+            if (apple.getWeight() == 0) nguoi2.speak('Moa Adam.... An nhu cho rua mi')
+        }
+        function eatApple2() {
+            nguoi2.eat(apple)
+            app.innerHTML = apple.getWeight();
+            per1.innerHTML = nguoi1.getWeight();
+            per2.innerHTML = nguoi2.getWeight();
+            if (apple.getWeight() == 0) nguoi1.speak("Moa Eva... Cho... An het cua tao")
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

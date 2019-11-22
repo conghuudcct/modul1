@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let n=prompt("nhap vao so phan tu cua mang");
+    let arr= []
+    for (let i =0;i<n; i++) {
+        let number=prompt("nhap phan tu thu "+ i );
+        arr.push(number)
+    }
+    document.write( "mang la " +arr);
+
+    for( let j=0; j<arr.length;j++) {
+        if(isNaN(arr[j])===false){
+            alert(arr[j])
+        }
+    }
+
+    // isNaN("so")-> false
+    //isNaN("chu")=-> true
+        
+    
+    
+    </script>
+</body>
+</html>

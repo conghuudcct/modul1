@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hinh chu nhat    </title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="400" style="border: 10px solid #0b0618;"></canvas><br>
+    <script>
+        let Rectangle = function (width, height) {
+            this.width = width;
+            this.height = height;
+            this.getWidth = function () {
+                return this.width;
+            }
+            this.getHeight = function () {
+                return this.height;
+            }
+            this.getArea = function () {
+                return this.width * height
+            }
+            this.getPerimeter = function () {
+                return this.height + width * 2;
+            }
+
+        }
+        let width = Math.floor(Math.random() * 300);
+        let height = Math.floor(Math.random() * 500);
+        let HCN = new Rectangle(width, height);
+        let Area = HCN.getArea();
+        let Perimeter = HCN.getPerimeter();
+
+        let mohinh = document.getElementById("myCanvas");
+        let ctx = mohinh.getContext("2d");
+        ctx.fillStyle = "#15a74d";
+        ctx.fillRect(50, 100, width, height);
+        ctx.font = "20px Arial"
+
+        ctx.fillText(` Are = ${Area}  Perimeter : ${Perimeter}` , 10, 20);
+        
+
+
+
+    </script>
+</body>
+
+</html>

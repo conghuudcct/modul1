@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let inputnam = prompt("nhap so nam");
+        let nam = parseInt(inputnam);
+        if (nam % 4 == 0) {
+            if (nam % 100 == 0) {
+                if (nam % 400 == 0) {
+                    alert(nam + " day la nam nhuan ");
+                } else {
+                    alert(nam + " day khong phai la nam nhuan ");
+                }
+            } else {
+                alert(nam + " day la nam nhuan ");
+            }
+        } else {
+            alert(nam + " day khong phai la nam nhuan ");
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

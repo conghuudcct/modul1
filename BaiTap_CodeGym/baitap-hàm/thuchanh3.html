@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1=[3,5,1,8,4,2,-3]
+        let arr2=[3,5,34,6,14,12]
+        let arr3=[]
+        let arr4=[0,0,0,0,0,0,]
+        function minArray(arr) {
+            let minArray=arr[0]
+            if(arr.length==0){
+                return 'mangr rong'
+            }
+            for(let i=0;i<arr.length;i++) {
+                if (minArray>arr[i]) {
+                    minArray=arr[i]
+                }
+            } 
+            return minArray;
+
+        }
+
+        let a=minArray(arr1)
+        alert(a)
+
+        let b=minArray(arr2)
+        alert(b)
+        
+        let c=minArray(arr3)
+        alert(c)
+
+        
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let username = prompt("nhap ten tu ban phim");
+        if (username == 'admin') {
+            let password = prompt("nhap mat khau tu ban phim")
+            if (password == 'themaster') {
+                alert('chuoi wellcom');
+            }  else if (password == null) {
+                alert('chuoi canceled');
+            }
+            
+        } else if ( username == null)  {
+            alert("chuoi caceled");
+        } else  {
+            alert("I Don't NO YOU");
+        }
+
+
+    
+    </script>
+</body>
+</html>
